@@ -1,13 +1,15 @@
 name: build-maven-project
 run-name: ${{github.actor}} is building the project
-on: push
+on: [push]
 jobs:
-  build-project:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-jdk
+      - name: set up jdk
+        uses: actions/setup-java@v3
         with:
-          version: 19
+          version: '19'
+      - name: build maven project
       - run: mvn clean install
 
