@@ -14,7 +14,7 @@ public class ReqResTests {
         System.out.println("this is test--1");
     }
     @Test(description = "this is user order creation test")
-    @Description("this is user order creation test")
+    @Description("this is user order creation test..")
     @Step("user is being created..")
     public void test2(){
         System.out.println("this is test-2");
